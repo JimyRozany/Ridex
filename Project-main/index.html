@@ -52,7 +52,7 @@
         <nav class="navbar" data-navbar>
           <ul class="navbar-list">
             <li>
-              <a href="#home" class="navbar-link" data-nav-link>Home</a>
+              <a href="/" class="navbar-link" data-nav-link>Home</a>
             </li>
 
             <li>
@@ -234,7 +234,7 @@
           </form>
           <div class="form-footer">
             <p>Already have an account?</p>
-            <a href="#">Sign in</a>
+            <a href="#" id="btn-signin-card">Sign in</a>
           </div>
         </div>
         <div class="close-card" id="close-signup-card">
@@ -268,7 +268,7 @@
           </form>
           <div class="form-footer">
             <p>i dont have an account !</p>
-            <a href="#">Sign Up</a>
+            <a href="#" id="btn-signup-card">Sign Up</a>
           </div>
         </div>
         <div class="close-card" id="close-login-card">
@@ -289,23 +289,30 @@
         </div>
         <div class="card-body">
           <ul>
-            <li>
+            <li class="field">
               <p>Name</p>
               <i class="fa-solid fa-chevron-right"></i>
             </li>
-            <li>
+            <li class="field">
               <p>Username</p>
               <i class="fa-solid fa-chevron-right"></i>
             </li>
-            <li>
+            <li class="field">
               <p>Profile Picture</p>
               <i class="fa-solid fa-chevron-right"></i>
             </li>
-            <li>
+            <li class="field">
               <p>Avatar</p>
               <i class="fa-solid fa-chevron-right"></i>
             </li>
           </ul>
+          <div class="change-field-container" id="change-field-container">
+            <div class="change-field" id="">
+              <input type="text">
+              <button id="btn-change-field">Save</button>
+            </div>
+          </div>
+          
         </div>
         <div class="close-card" id="close-editprofil-card">
           <i class="fa-regular fa-circle-xmark"></i>
@@ -382,7 +389,7 @@
           </ul>
         </div>
         <div class="card-buttons">
-          <div>
+          <div id="cancel-btn-setting">
             <span>Cancel</span>
             <i class="fa-solid fa-xmark"></i>
           </div>

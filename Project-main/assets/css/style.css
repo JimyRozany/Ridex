@@ -1678,6 +1678,7 @@ a {
   background-color: var(--white);
   /* padding: 10px; */
   border-radius: 10px;
+  position: relative;
 }
 .edit-profile-container .card-body ul li {
   display: flex;
@@ -1697,6 +1698,41 @@ a {
 }
 .edit-profile-container .card-body ul li i {
   font-size: 16px;
+}
+.edit-profile-container .card-body .change-field-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.edit-profile-container .card-body .change-field-container .change-field {
+  width: 300px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+.edit-profile-container .card-body .change-field-container .change-field input {
+  outline: none;
+  border: none;
+  background-color: #e7e7ef;
+  padding: 5px;
+}
+.edit-profile-container
+  .card-body
+  .change-field-container
+  .change-field
+  button {
+  background-color: var(--carolina-blue);
+  color: var(--white);
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 .edit-profile-container .close-card {
   position: absolute;
@@ -2015,15 +2051,15 @@ input:checked + .slider:before {
   width: 250px;
   height: 200px;
 }
-.payment-container .close-card{
+.payment-container .close-card {
   position: absolute;
-  top: 10px ;
-  right: 10px ;
-  font-size: 30px ;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
   color: gray;
   transition: all 300ms;
 }
-.payment-container .close-card:hover{
+.payment-container .close-card:hover {
   color: red;
   cursor: pointer;
 }
