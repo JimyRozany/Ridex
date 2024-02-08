@@ -1367,7 +1367,7 @@ a {
   position: fixed;
   z-index: 999;
   /* display: none; */
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -1379,7 +1379,7 @@ a {
   width: 500px;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   padding: 10px;
@@ -1510,7 +1510,7 @@ a {
   width: 500px;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   padding: 10px;
@@ -1641,7 +1641,7 @@ a {
   padding: 10px;
   border-radius: 20px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 
@@ -1716,12 +1716,23 @@ a {
   background: #fff;
   padding: 10px;
   border-radius: 5px;
+  display: none;
 }
 .edit-profile-container .card-body .change-field-container .change-field input {
   outline: none;
   border: none;
   background-color: #e7e7ef;
   padding: 5px;
+}
+#change-file-field{
+  display: none;
+}
+#change-file-field input {
+  display: none;
+}
+#change-file-field label {
+  text-align: center;
+  font-size: 30px;
 }
 .edit-profile-container
   .card-body
@@ -1757,7 +1768,7 @@ a {
   border-radius: 20px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
-  display: flex;
+  display: none;
   flex-direction: column;
   position: relative;
 }
@@ -1926,6 +1937,7 @@ input:checked + .slider:before {
   overflow: hidden;
   transition: width 1.5s;
   position: relative;
+  display: none;
 }
 .payment-container .payment-card {
   padding: 10px;

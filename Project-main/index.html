@@ -289,27 +289,34 @@
         </div>
         <div class="card-body">
           <ul>
-            <li class="field">
+            <li id="name-field">
               <p>Name</p>
               <i class="fa-solid fa-chevron-right"></i>
             </li>
-            <li class="field">
+            <li id="username-field">
               <p>Username</p>
               <i class="fa-solid fa-chevron-right"></i>
             </li>
-            <li class="field">
+            <li id="profile-img-field">
               <p>Profile Picture</p>
               <i class="fa-solid fa-chevron-right"></i>
             </li>
-            <li class="field">
+            <li id="avatar-field">
               <p>Avatar</p>
               <i class="fa-solid fa-chevron-right"></i>
             </li>
           </ul>
           <div class="change-field-container" id="change-field-container">
-            <div class="change-field" id="">
-              <input type="text">
-              <button id="btn-change-field">Save</button>
+            <div class="change-field" id="change-text-field">
+              <input type="text" >
+              <button class="btn-change-field">Save</button>
+            </div>
+            <div class="change-field" id="change-file-field">
+              <label for="input-image" >
+                <i class="fa-solid fa-upload"></i>
+                <input type="file" id="input-image">
+              </label>
+              <button class="btn-change-field">Save</button>
             </div>
           </div>
           

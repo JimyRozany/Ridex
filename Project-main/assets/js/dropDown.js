@@ -52,11 +52,6 @@ closeSettingPrivacyCard.addEventListener("click", () => {
   settingPrivacyContainer.style.display = "none";
 });
 
-containerCards.style.display = "none"; // defalut value
-signupContainer.style.display = "none"; // defalut value
-loginContainer.style.display = "none"; // defalut value
-editProfileContainer.style.display = "none";
-settingPrivacyContainer.style.display = "none";
 
 signup.addEventListener("click", () => {
   containerCards.style.display = "flex";
@@ -103,17 +98,45 @@ btnSignup.addEventListener("click", () => {
 
 // edit profile
 const changeFieldContainer = document.getElementById("change-field-container");
-const btnChangeField = document.getElementById("btn-change-field");
+const changeTextField = document.getElementById("change-text-field");
+const changeFileField = document.getElementById("change-file-field");
 
-const allFields = document.querySelectorAll(".field");
+const saveButtons = document.querySelectorAll(".btn-change-field");
 
-allFields.forEach((field) => {
-  field.addEventListener("click", () => {
+
+const nameField = document.querySelector("#name-field");
+const usernameField = document.querySelector("#username-field");
+const profileImgField = document.querySelector("#profile-img-field");
+const avatarField = document.querySelector("#avatar-field");
+
+
+
+nameField.addEventListener("click" ,()=>{
     changeFieldContainer.style.display = "flex";
-    
-  });
-});
+    changeTextField.style.display = "block"
 
-btnChangeField.addEventListener("click", () => {
-  changeFieldContainer.style.display = "none";
-});
+  
+})
+usernameField.addEventListener("click" ,()=>{
+  changeFieldContainer.style.display = "flex";
+  changeTextField.style.display = "block"
+
+})
+profileImgField.addEventListener("click" ,()=>{
+  changeFieldContainer.style.display = "flex";
+  changeFileField.style.display = "block"
+})
+avatarField.addEventListener("click" ,()=>{
+  changeFieldContainer.style.display = "flex";
+  changeFileField.style.display = "block"
+
+})
+
+saveButtons.forEach(btn=>{
+  btn.addEventListener("click", () => {
+    changeTextField.style.display = "none"
+    changeFileField.style.display = "none"
+    changeFieldContainer.style.display = "none";
+  });
+})
+

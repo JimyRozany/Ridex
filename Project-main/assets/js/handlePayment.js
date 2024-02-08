@@ -31,9 +31,16 @@ if (navigator.geolocation) {
   );
 }
 
+const selectDay = document.getElementById("select-day");
+const selectMonth = document.getElementById("select-month");
+const selectYear = document.getElementById("select-year");
+
 const openPaymentView = () => {
   containerCards.style.display = "flex";
   paymentContainer.style.display = "flex";
+  selectDay.innerHTML += generateDay();
+  selectMonth.innerHTML += generateMonth();
+  selectYear.innerHTML += generateYear();
 };
 
 const openAddressCard = () => {
@@ -60,3 +67,25 @@ closeBtn.addEventListener("click", () => {
   addressCard.style.display = "none";
   paymentContainer.style.width = "400px";
 });
+
+const generateDay = () => {
+  let dayOption = '';
+  for (let i = 1; i <= 7; i++) {
+    dayOption += `<option value="${i}">${i}</option>`;
+  }
+  return dayOption;
+};
+const generateMonth = () => {
+  let monthOption ='';
+  for (let i = 1; i <= 12; i++) {
+    monthOption += `<option value="${i}">${i}</option>`;
+  }
+  return monthOption;
+};
+const generateYear = () => {
+  let yearOption ='';
+  for (let i = 1; i <= 10; i++) {
+    yearOption += `<option value="${2022 + i}">${2022 + i}</option>`;
+  }
+  return yearOption;
+};
