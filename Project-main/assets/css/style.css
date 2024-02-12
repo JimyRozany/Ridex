@@ -1281,26 +1281,33 @@ a {
 
 /*  custom drop down card */
 .dropDownCard {
-  width: 300px;
+  width: 250px;
   padding: 10px;
   position: absolute;
-  top: 60px;
+  top: 50px;
   right: 20px;
   background-color: white;
-  display: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  /* display: none; */
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 .dropDownCard .user-info {
   display: flex;
   align-items: center;
+  justify-content: start;
   margin: 5px 0;
+  gap: 10px;
 }
 /* user image container + image */
 .dropDownCard .user-info div {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
-  padding-right: 10px;
 }
 
 .dropDownCard .user-info div img {
@@ -1312,49 +1319,55 @@ a {
 
 .dropDownCard .user-info .user-name {
   font-size: 18px;
-  color: black;
+  color: #7d7c7c;
   font-weight: 900;
+  font-family: var(--ff-nunito);
 }
 .dropDownCard ul li .list-item {
-  padding: 10px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 0;
+  margin-top: 5px;
+  position: relative;
 }
+.dropDownCard ul li .list-item:hover .icon-and-text div,
+.dropDownCard ul li .list-item:hover .icon-and-text p {
+  color: #1b79b7;
+  transition: color 200ms;
+}
+.dropDownCard ul li .list-item:hover .arrow-icon i {
+  right: 5px;
+  color: #1b79b7;
+}
+/* .dropDownCard ul li .list-item .icon-and-text .arrow-icon i{ 
+  font-size: 50px;
+} */
 .dropDownCard ul li .list-item .icon-and-text {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .dropDownCard ul li .list-item .icon-and-text div {
-  width: 25px;
-  height: 25px;
-  background-color: rgba(128, 128, 128, 0.3);
-  padding: 3px;
+  padding: 5px 8px;
   border-radius: 50%;
-}
-.dropDownCard ul li .list-item .icon-and-text img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background: #f1efef;
+  color: #7d7c7c;
 }
 .dropDownCard ul li .list-item .icon-and-text p {
   padding-left: 10px;
+  font-family: var(--ff-nunito);
   font-size: 16px;
   color: gray;
   transition: color 300ms;
 }
-.dropDownCard ul li .list-item .icon-and-text p:hover {
-  color: var(--carolina-blue);
-}
-.dropDownCard ul li .list-item .arrow-icon {
-  width: 18px;
-  height: 18px;
-}
-.dropDownCard ul li .list-item .arrow-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.dropDownCard ul li .list-item .arrow-icon i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  color: #7d7c7c;
 }
 
 /*  end custom drop down card */
@@ -1724,7 +1737,7 @@ a {
   background-color: #e7e7ef;
   padding: 5px;
 }
-#change-file-field{
+#change-file-field {
   display: none;
 }
 #change-file-field input {

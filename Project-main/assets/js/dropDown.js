@@ -1,11 +1,29 @@
 /* show & hide drop down list */
 const profileIcon = document.getElementById("profile-icon");
 const dropDownCard = document.getElementById("dropDownCard");
+
 profileIcon.addEventListener("click", () => {
-  dropDownCard.style.display === "block"
-    ? (dropDownCard.style.display = "none")
-    : (dropDownCard.style.display = "block");
+  showHideDropdown();
 });
+
+const showHideDropdown = () => {
+  dropDownCard.style.opacity = dropDownCard.style.opacity === "1" ? "0" : "1";
+  dropDownCard.style.transform =
+    dropDownCard.style.transform === "translateY(10px)"
+      ? "translateY(-10px)"
+      : "translateY(10px)";
+  dropDownCard.style.pointerEvents =
+    dropDownCard.style.pointerEvents === "auto" ? "none" : "auto";
+};
+
+window.onclick = (e) => {
+  if (
+    !e.target.matches("#dropDownCard") &&
+    !e.target.matches("#profile-icon")
+  ) {
+    showHideDropdown();
+  }
+};
 /* end show & hide drop down list */
 
 // all options
@@ -52,27 +70,26 @@ closeSettingPrivacyCard.addEventListener("click", () => {
   settingPrivacyContainer.style.display = "none";
 });
 
-
 signup.addEventListener("click", () => {
   containerCards.style.display = "flex";
   signupContainer.style.display = "flex";
-  dropDownCard.style.display = "none";
+  showHideDropdown();
 });
 
 login.addEventListener("click", () => {
   containerCards.style.display = "flex";
   loginContainer.style.display = "flex";
-  dropDownCard.style.display = "none";
+  showHideDropdown();
 });
 editProfile.addEventListener("click", () => {
   containerCards.style.display = "flex";
   editProfileContainer.style.display = "flex";
-  dropDownCard.style.display = "none";
+  showHideDropdown();
 });
 settingPrivacy.addEventListener("click", () => {
   containerCards.style.display = "flex";
   settingPrivacyContainer.style.display = "flex";
-  dropDownCard.style.display = "none";
+  showHideDropdown();
 });
 /* end show & hide cards  */
 
@@ -103,40 +120,32 @@ const changeFileField = document.getElementById("change-file-field");
 
 const saveButtons = document.querySelectorAll(".btn-change-field");
 
-
 const nameField = document.querySelector("#name-field");
 const usernameField = document.querySelector("#username-field");
 const profileImgField = document.querySelector("#profile-img-field");
 const avatarField = document.querySelector("#avatar-field");
 
-
-
-nameField.addEventListener("click" ,()=>{
-    changeFieldContainer.style.display = "flex";
-    changeTextField.style.display = "block"
-
-  
-})
-usernameField.addEventListener("click" ,()=>{
+nameField.addEventListener("click", () => {
   changeFieldContainer.style.display = "flex";
-  changeTextField.style.display = "block"
-
-})
-profileImgField.addEventListener("click" ,()=>{
+  changeTextField.style.display = "block";
+});
+usernameField.addEventListener("click", () => {
   changeFieldContainer.style.display = "flex";
-  changeFileField.style.display = "block"
-})
-avatarField.addEventListener("click" ,()=>{
+  changeTextField.style.display = "block";
+});
+profileImgField.addEventListener("click", () => {
   changeFieldContainer.style.display = "flex";
-  changeFileField.style.display = "block"
+  changeFileField.style.display = "block";
+});
+avatarField.addEventListener("click", () => {
+  changeFieldContainer.style.display = "flex";
+  changeFileField.style.display = "block";
+});
 
-})
-
-saveButtons.forEach(btn=>{
+saveButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    changeTextField.style.display = "none"
-    changeFileField.style.display = "none"
+    changeTextField.style.display = "none";
+    changeFileField.style.display = "none";
     changeFieldContainer.style.display = "none";
   });
-})
-
+});
