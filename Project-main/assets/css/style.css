@@ -1423,6 +1423,10 @@ a {
   color: var(--carolina-blue);
   padding-right: 15px;
 }
+#btn-eye-input-signup:hover ,
+#btn-eye-input-login:hover {
+  cursor: pointer;
+}
 .sign-up-container .form .form-input .password-container {
   display: flex;
   justify-content: space-between;

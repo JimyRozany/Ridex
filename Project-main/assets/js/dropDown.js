@@ -76,12 +76,30 @@ signup.addEventListener("click", () => {
   containerCards.style.display = "flex";
   signupContainer.style.display = "flex";
   showHideDropdown();
+  const passwordInput = document.getElementById("password-input-signup");
+  const eyeBtn = document.getElementById("btn-eye-input-signup");
+  eyeBtn.addEventListener("click", () => {
+    passwordInput.type =
+      passwordInput.type === "password" ? "text" : "password";
+
+    eyeBtn.style.textDecoration =
+      passwordInput.type === "password" ? "none" : "line-through white 4px";
+  });
 });
 
 login.addEventListener("click", () => {
   containerCards.style.display = "flex";
   loginContainer.style.display = "flex";
   showHideDropdown();
+  const passwordInput = document.getElementById("password-input-login");
+  const eyeBtn = document.getElementById("btn-eye-input-login");
+  eyeBtn.addEventListener("click", () => {
+    passwordInput.type =
+      passwordInput.type === "password" ? "text" : "password";
+
+    eyeBtn.style.textDecoration =
+      passwordInput.type === "password" ? "none" : "line-through white 4px";
+  });
 });
 editProfile.addEventListener("click", () => {
   containerCards.style.display = "flex";
