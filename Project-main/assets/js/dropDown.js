@@ -21,7 +21,9 @@ window.onclick = (e) => {
     !e.target.matches("#dropDownCard") &&
     !e.target.matches("#profile-icon")
   ) {
-    showHideDropdown();
+    dropDownCard.style.opacity = "0";
+    dropDownCard.style.transform = "translateY(-10px)";
+    dropDownCard.style.pointerEvents = "none";
   }
 };
 /* end show & hide drop down list */
